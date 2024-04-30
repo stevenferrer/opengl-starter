@@ -1,0 +1,10 @@
+CompileFlags:
+  Add: [-xc++, -std=c++20, -Wall]
+  Compiler: clang++
+
+InlayHints:
+  BlockEnd: No
+  Designators: No
+  Enabled: Yes
+  ParameterNames: No
+  DeducedTypes: Yes

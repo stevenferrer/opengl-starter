@@ -36,12 +36,12 @@ set(GLAD_DIR ${VENDOR_DIR}/glad)
 add_library(glad ${GLAD_DIR}/src/glad.c)
 target_include_directories(glad PUBLIC ${GLAD_DIR}/include)
 
-add_executable(${PROJECT_NAME})
-target_sources(${PROJECT_NAME}
+add_executable(hellowindow)
+target_sources(hellowindow
     PRIVATE
-    ${SRC_DIR}/main.cpp
+    ${SRC_DIR}/hellowindow.cpp
 )
-target_link_libraries(${PROJECT_NAME}
+target_link_libraries(hellowindow
     PRIVATE
     glfw
     glad

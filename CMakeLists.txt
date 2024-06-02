@@ -36,14 +36,16 @@ set(GLAD_DIR ${VENDOR_DIR}/glad)
 add_library(glad ${GLAD_DIR}/src/glad.c)
 target_include_directories(glad PUBLIC ${GLAD_DIR}/include)
 
-add_executable(hellowindow)
-target_sources(hellowindow
-    PRIVATE
-    ${SRC_DIR}/hellowindow.cpp
-)
-target_link_libraries(hellowindow
-    PRIVATE
+# link to all targets
+link_libraries(
     glfw
     glad
     ${CMAKE_DL_LIBS} # Refer to https://stackoverflow.com/a/56842079/2394163
 )
+
+add_executable(hello_window)
+target_sources(hello_window
+    PRIVATE
+    ${SRC_DIR}/hello_window.cpp
+)
+

@@ -1,5 +1,6 @@
 #include <iostream>
 
+// Refer to https://www.glfw.org/docs/3.3/build_guide.html#build_include
 #define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
 #include <glad/glad.h>
